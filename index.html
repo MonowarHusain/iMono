@@ -28,7 +28,11 @@
             background: radial-gradient(circle at center, #ffffff 0%, #f9f9f9 100%);
         }
         .logo-glow {
-            filter: drop-shadow(0 0 8px rgba(0,0,0,0.05));
+            filter: drop-shadow(0 0 12px rgba(0,0,0,0.08));
+        }
+        img {
+            max-width: 100%;
+            height: auto;
         }
     </style>
 </head>
@@ -37,15 +41,16 @@
     <!-- Navigation -->
     <nav class="fixed w-full z-50 glass">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <!-- Logo Section: Replace 'src' with your actual logo file path -->
-            <div class="flex items-center gap-3">
-                <div class="h-10 w-10 bg-black rounded-lg flex items-center justify-center logo-glow">
-                    <span class="text-white font-black text-xl">iM</span>
-                </div>
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="logo.png" alt="iMono Logo" class="h-10 w-auto logo-glow transition-transform group-hover:scale-105" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <!-- Fallback if logo.png is missing -->
+                <div class="hidden h-10 w-10 bg-black rounded-lg items-center justify-center text-white font-black text-xl">iM</div>
+                
                 <div class="text-2xl font-extrabold tracking-tighter">
                     i<span class="text-zinc-400">Mono</span>
                 </div>
-            </div>
+            </a>
 
             <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-zinc-500">
                 <a href="#journey" class="hover:text-black transition-colors">The Journey</a>
@@ -107,11 +112,11 @@
                     </p>
                     <ul class="space-y-6">
                         <li class="flex gap-4">
-                            <div class="w-12 h-12 rounded-full bg-zinc-50 flex items-center justify-center flex-shrink-0 font-bold">01</div>
+                            <div class="w-12 h-12 rounded-full bg-zinc-50 flex items-center justify-center flex-shrink-0 font-bold italic">01</div>
                             <p class="text-zinc-600 pt-2"><strong class="text-black">Patient Development:</strong> We didn't rush. We spent years refining the infrastructure and philosophy.</p>
                         </li>
                         <li class="flex gap-4">
-                            <div class="w-12 h-12 rounded-full bg-zinc-50 flex items-center justify-center flex-shrink-0 font-bold">02</div>
+                            <div class="w-12 h-12 rounded-full bg-zinc-50 flex items-center justify-center flex-shrink-0 font-bold italic">02</div>
                             <p class="text-zinc-600 pt-2"><strong class="text-black">All-Rounder DNA:</strong> From tech to textiles, our foundation is built for infinite expansion.</p>
                         </li>
                     </ul>
@@ -132,21 +137,21 @@
                      <svg class="w-16 h-16 text-zinc-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
                 </div>
                 <h3 class="text-2xl font-bold mb-4 italic">01. iMono Tech</h3>
-                <p class="text-zinc-500 leading-relaxed font-light">Minimalist hardware and intuitive software designed to disappear into your workflow.</p>
+                <p class="text-zinc-500 leading-relaxed font-light text-sm">Minimalist hardware and intuitive software designed to disappear into your workflow.</p>
             </div>
             <div class="group">
-                <div class="aspect-video bg-zinc-900 rounded-3xl mb-8 overflow-hidden flex items-center justify-center group-hover:bg-black transition-colors">
+                <div class="aspect-video bg-zinc-900 rounded-3xl mb-8 overflow-hidden flex items-center justify-center group-hover:bg-black transition-colors text-white">
                      <svg class="w-16 h-16 text-zinc-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
                 </div>
                 <h3 class="text-2xl font-bold mb-4 italic">02. iMono Living</h3>
-                <p class="text-zinc-500 leading-relaxed font-light">Sustainable lifestyle and interior objects that define the modern "monolithic" aesthetic.</p>
+                <p class="text-zinc-500 leading-relaxed font-light text-sm">Sustainable lifestyle and interior objects that define the modern "monolithic" aesthetic.</p>
             </div>
             <div class="group">
                 <div class="aspect-video bg-zinc-50 rounded-3xl mb-8 overflow-hidden flex items-center justify-center group-hover:bg-zinc-100 transition-colors">
                      <svg class="w-16 h-16 text-zinc-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
                 </div>
                 <h3 class="text-2xl font-bold mb-4 italic">03. iMono Studios</h3>
-                <p class="text-zinc-500 leading-relaxed font-light">Creative strategy and architectural consulting for brands looking for singular identity.</p>
+                <p class="text-zinc-500 leading-relaxed font-light text-sm">Creative strategy and architectural consulting for brands looking for singular identity.</p>
             </div>
         </div>
     </section>
@@ -156,7 +161,7 @@
         <div class="absolute top-0 right-0 w-96 h-96 bg-zinc-800 rounded-full -mr-48 -mt-48 opacity-20 blur-3xl"></div>
         <div class="max-w-4xl mx-auto text-center relative z-10">
             <h2 class="text-5xl font-bold mb-8">Secure Your Place.</h2>
-            <p class="text-zinc-400 text-xl mb-12 font-light">The five-year journey is nearing its destination. Join the waitlist for exclusive early access to our debut vertical.</p>
+            <p class="text-zinc-400 text-xl mb-12 font-light">The journey that began in 2020 is nearing its destination. Join the waitlist for exclusive early access.</p>
             
             <form id="subscribeForm" class="flex flex-col md:flex-row gap-4 justify-center">
                 <input type="email" placeholder="Email address" required
@@ -175,8 +180,10 @@
     <footer class="py-16 px-6 border-t border-zinc-100">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
             <div class="flex items-center gap-4">
-                <div class="h-8 w-8 bg-black rounded flex items-center justify-center">
-                    <span class="text-white font-black text-xs uppercase">iM</span>
+                <img src="logo.png" alt="iMono" class="h-8 w-auto opacity-80" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <!-- Fallback if logo.png is missing -->
+                <div class="hidden h-8 w-8 bg-black rounded flex items-center justify-center">
+                    <span class="text-white font-black text-[10px] uppercase">iM</span>
                 </div>
                 <span class="text-sm font-black uppercase tracking-[0.4em]">iMono Global</span>
             </div>
@@ -202,7 +209,6 @@
             btn.innerHTML = 'Registering...';
             btn.disabled = true;
 
-            // Simulate storage or API call
             setTimeout(() => {
                 this.style.opacity = '0';
                 setTimeout(() => {
@@ -213,7 +219,6 @@
             }, 1000);
         });
 
-        // Intersection Observer for scroll animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
