@@ -10,6 +10,13 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'Webhook URL not configured' });
   }
 
+  // Format time specifically for Bangladesh (BDT)
+  const bdtTime = new Intl.DateTimeFormat('en-GB', {
+    timeZone: 'Asia/Dhaka',
+    dateStyle: 'medium',
+    timeStyle: 'long',
+  }).format(new Date());
+
   const payload = {
     username: "iMono Waitlist Bot",
     embeds: [{
@@ -18,8 +25,9 @@ export default async function handler(req, res) {
       fields: [
         { name: "User Email", value: `\`${email}\``, inline: false },
         { name: "Source", value: "iMono Public Site", inline: true },
-        { name: "Timestamp", value: new Date().toLocaleString(), inline: true }
+        { name: "Time (BDT)", value: `\`${bdtTime}\``, inline: true }
       ],
+      timestamp: new Date().toISOString(),
       footer: { text: "Planned since 2020 • SECURE API MODE" }
     }]
   };
